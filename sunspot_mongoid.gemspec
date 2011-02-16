@@ -4,14 +4,14 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = %q{sunspot_mongoid}
+  s.name = "sunspot_mongoid"
   s.version = "0.4.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jugyo"]
-  s.date = %q{2011-03-04}
-  s.description = %q{A Sunspot wrapper for Mongoid that is like sunspot_rails.}
-  s.email = %q{jugyo.org@gmail.com}
+  s.date = "2012-03-20"
+  s.description = "A Sunspot wrapper for Mongoid that is like sunspot_rails."
+  s.email = "jugyo.org@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE",
     "README.md"
@@ -25,20 +25,17 @@ Gem::Specification.new do |s|
     "examples/example.rb",
     "init.rb",
     "lib/sunspot/mongoid.rb",
+    "lib/sunspot/mongoid/railtie.rb",
     "lib/sunspot_mongoid.rb",
     "sunspot_mongoid.gemspec",
+    "tasks/sunspot_mongoid.rake",
     "test/helper.rb",
     "test/test_sunspot_mongoid.rb"
   ]
-  s.homepage = %q{http://github.com/jugyo/sunspot_mongoid}
+  s.homepage = "http://github.com/jugyo/sunspot_mongoid"
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.6.0}
-  s.summary = %q{A Sunspot wrapper for Mongoid.}
-  s.test_files = [
-    "examples/example.rb",
-    "test/helper.rb",
-    "test/test_sunspot_mongoid.rb"
-  ]
+  s.rubygems_version = "1.8.11"
+  s.summary = "A Sunspot wrapper for Mongoid."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
