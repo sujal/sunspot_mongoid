@@ -42,6 +42,16 @@ module Sunspot
       def solr_index(opt={})
         Sunspot.index!(all)
       end
+
+      def solr_index_orphans(opts={})
+        batch_size = opts[:batch_size] || Sunspot.config.indexing.default_batch_size
+        count = self.count
+        indexed_ids = solr_search_ids { paginate(:page => 1, :per_page => count) }.to_set
+        only(:id).each do |object|
+          indexed_ids.delete(object.id)
+        end
+        indexed_ids.to_a
+      end
     end
 
 
