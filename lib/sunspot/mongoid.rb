@@ -42,11 +42,7 @@ module Sunspot
       def solr_index(opt={})
         batch_size = opts[:batch_size] || Sunspot.config.indexing.default_batch_size
         0.step(count, batch_size) do |offset|
-          records = []
-          limit(batch_size).skip(offset).each do |r|
-            records << r
-          end
-          Sunspot.index(records)
+          Sunspot.index(limit(batch_size).skip(offset))
         end
         Sunspot.commit
       end
