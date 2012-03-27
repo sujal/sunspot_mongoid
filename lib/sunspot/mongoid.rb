@@ -39,7 +39,7 @@ module Sunspot
     module ClassMethods
       # The sunspot solr_index method is very dependent on ActiveRecord, so
       # we'll change it to work more efficiently with Mongoid.
-      def solr_index(opt={})
+      def solr_index(opts={})
         batch_size = opts[:batch_size] || Sunspot.config.indexing.default_batch_size
         0.step(count, batch_size) do |offset|
           Sunspot.index(limit(batch_size).skip(offset))
