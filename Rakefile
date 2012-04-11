@@ -10,12 +10,6 @@ begin
     gem.email = "jugyo.org@gmail.com aq1018@gmail.com"
     gem.homepage = "http://github.com/aq1018/sunspot_mongoid"
     gem.authors = ["jugyo", "aq1018"]
-    gem.add_runtime_dependency "mongoid", ">= 0"
-    gem.add_runtime_dependency "sunspot", ">= 1.1.0"
-    gem.add_runtime_dependency "sunspot_rails", ">= 1.1.0"
-    gem.add_development_dependency "shoulda", ">= 0"
-    gem.add_development_dependency "rr", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
