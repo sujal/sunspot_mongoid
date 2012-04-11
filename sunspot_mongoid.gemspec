@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["jugyo", "aq1018"]
-  s.date = "2012-03-20"
+  s.date = "2012-04-11"
   s.description = "A Sunspot wrapper for Mongoid that is like sunspot_rails."
   s.email = "jugyo.org@gmail.com aq1018@gmail.com"
   s.extra_rdoc_files = [
@@ -20,7 +20,6 @@ Gem::Specification.new do |s|
     ".document",
     ".rvmrc",
     "Gemfile",
-    "Gemfile.lock",
     "LICENSE",
     "README.md",
     "Rakefile",
