@@ -78,7 +78,7 @@ module Sunspot
 
       def criteria(id)
         c = @clazz.criteria
-        c.respond_to?(:for_ids) ? c.for_ids(ids) : c.id(ids)
+        c.respond_to?(:for_ids) ? c.for_ids(ids) : c.id(ids)
       end
     end
     def _remove_index
