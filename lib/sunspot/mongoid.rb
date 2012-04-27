@@ -40,7 +40,7 @@ module Sunspot
       # The sunspot solr_index method is very dependent on ActiveRecord, so
       # we'll change it to work more efficiently with Mongoid.
       def solr_index(opts={})
-        batch_size = opts[:batch_size] || Sunspot.config.indexing.default_batch_size
+        batch_size = opts[:batch_size] || 50 # Sunspot.config.indexing.default_batch_size
         0.step(count, batch_size) do |offset|
           Sunspot.index(limit(batch_size).skip(offset))
         end
@@ -48,7 +48,7 @@ module Sunspot
       end
 
       def solr_index_orphans(opts={})
-        batch_size = opts[:batch_size] || Sunspot.config.indexing.default_batch_size
+        batch_size = opts[:batch_size] || 50 #Sunspot.config.indexing.default_batch_size
         count = self.count
         indexed_ids = solr_search_ids { paginate(:page => 1, :per_page => count) }.to_set
         only(:id).each do |object|
